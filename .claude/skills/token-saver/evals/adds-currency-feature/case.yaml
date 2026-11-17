@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: adds-currency-feature
+expected_outcome: |
+  The agent adds an optional per-item "currency" (USD/EUR/GBP, default USD), converts to USD with
+  1 EUR = 1.08 USD and 1 GBP = 1.27 USD kept in shop/config.py, and adds a --currency option so the
+  CLI prints the TOTAL line in the chosen currency rounded to 2 decimals. For items A (10 USD x2),
+  B (5 EUR x3) and C (2 GBP x10) the totals are 61.60 USD, 57.04 EUR and 48.50 GBP (+/-0.02).
+  Existing tests still pass, new tests cover the feature, and the work uses few turns.
+context:
+  scaffold_script: place-files.sh

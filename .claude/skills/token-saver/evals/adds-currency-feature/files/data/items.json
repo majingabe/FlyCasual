@@ -1,0 +1,5 @@
+[
+  {"sku": "A1", "name": "X-wing model", "price": 24.5, "qty": 2},
+  {"sku": "B2", "name": "Maneuver dial", "price": 3.25, "qty": 10},
+  {"sku": "C3", "name": "Dice set", "price": 8.0, "qty": 3}
+]
