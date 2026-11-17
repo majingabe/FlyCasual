@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: reads-huge-build-log-once
+expected_outcome: |
+  The agent runs build.sh (about 4,000 lines of output) once, captures its output to a file
+  or filters it on the first run, finds the single real error
+  "module_2187.c:42: undefined reference to 'ship_dial_init'" by searching the captured
+  output, and reports it briefly without re-running the build to look at other parts.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: weighs-mid-task-model-switch
+expected_outcome: |
+  The agent explains that switching models mid-session makes the next request re-read the whole
+  long conversation without cache hits (a one-time cost), gives a clear recommendation rather than
+  a neutral list, and offers a cache-friendly alternative such as switching at a natural break after
+  /compact or /clear with a short handoff, lowering the effort level (which keeps the cache on the
+  5.5 models), or handing simple sub-tasks to a smaller model. It does this in a short answer.

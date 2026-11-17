@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: fixes-failing-test-efficiently
+expected_outcome: |
+  The agent fixes the discount bug in inventory/pricing.py (it applies the discount
+  as price * discount instead of price * (1 - discount)) so that
+  `python3 -m unittest discover -s tests` passes, without changing the tests.
+  It works with few turns: reads the small project files together in one batched
+  step instead of one per turn, does not re-read a file just to confirm an edit,
+  and runs the test suite only a small number of times.
+context:
+  scaffold_script: place-files.sh
